@@ -1,0 +1,18 @@
+.add_value{
+    background-color: rgba(255, 255, 255, 0);
+    background-size: cover;
+    background-image: url("../../../public/assets/img/add_value_bk.jpg");
+    width: 100vw;
+    .bullets_container{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        .bullet_card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 300px;
+            gap: 20px;
+        }
+    }
+}

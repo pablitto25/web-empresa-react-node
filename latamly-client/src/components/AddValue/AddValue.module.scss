@@ -1,0 +1,65 @@
+@import "../../styles/components/addValue";
+@import "../../styles/base/variables";
+
+.add_value{
+    color: $ligth-text-color;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 80px;
+    @media screen and (max-width: $medium) {
+        padding: 40px;
+    }
+    h3{
+        font-size: 1.5rem;
+        font-weight: 300;
+        span{
+            font-weight: 600;
+        }
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    .separator{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        span{
+            border: 1px solid $red;
+            width: 100px;
+        }
+    }
+    .bullets_container{
+        gap: 20px;
+        padding: 30px 0;
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+            gap: 30px;
+        }
+        @media screen and (max-width: $small) {
+            gap: 100px;
+        }
+        .bullet_card{
+            padding: 0 40px;
+            @media screen and (max-width: $large) {
+                padding: 0;
+            }
+            @media screen and (max-width: $medium) {
+                height: 200px;
+            }
+            @media screen and (max-width: $small) {
+                height: 250px;
+            }
+            h4{
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 1;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+   
+}
