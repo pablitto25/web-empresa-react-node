@@ -1,0 +1,13 @@
+{
+    "items": [
+        {
+            "name": "name",
+            "linkedin": "linkeding-cta",
+            "logo": "logo",
+            "identification": "rut/cuit/lo que sea",
+            "adress": "adress",
+            "state": "state",
+            "country": "country"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+latamly-client/node_modules
+latamly-server/node_modules
+latamly-client/.pnp
+latamly-server/.pnp
+.pnp.js
+
+# testing
+latamly-client/coverage
+latamly-server/coverage
+
+# production
+latamly-client/build
+latamly-server/build
+
+# misc
+latamly-client/.DS_Store
+latamly-client/.env.local
+latamly-client/.env.development.local
+latamly-client/.env.test.local
+latamly-client/.env.production.local
+
+latamly-server/.DS_Store
+latamly-server/.env.local
+latamly-server/.env.development.local
+latamly-server/.env.test.local
+latamly-server/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
