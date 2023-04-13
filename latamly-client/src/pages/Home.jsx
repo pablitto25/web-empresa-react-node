@@ -3,6 +3,7 @@ import AddValue from '../components/AddValue/AddValue'
 import Header from "../components/Header/Header"
 import Hero from "../components/Hero/Hero"
 
+
 const Home = () => {
   return (
     <>
