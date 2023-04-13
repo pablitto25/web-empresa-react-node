@@ -2,7 +2,7 @@
     line-height: 1.5;
     font-weight: 300;
     font-size: 17px;
-  
+    
     color-scheme: light dark;
     color: $primary-text-color;
     background-color: #ffffff;
@@ -16,11 +16,13 @@
     
 }
 body {
+    font-family: 'Raleway', sans-serif !important;
     margin: 0;
     display: flex;
     place-items: center;
     min-width: 320px;
 }
+
 #root {
     margin: 0 auto;
     text-align: center;
