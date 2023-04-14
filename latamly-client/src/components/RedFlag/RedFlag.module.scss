@@ -1,0 +1,21 @@
+@import "./../../styles/components/redFlag";
+
+.red_flag {
+  .red_flag_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    h5 {
+      font-size: 2rem;
+      font-weight: 400;
+      span {
+        font-weight: 600;
+      }
+    }
+    p {
+      color: #ffffff;
+    }
+  }
+}
