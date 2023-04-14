@@ -7,9 +7,9 @@ import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Hero />
-      <AddValue />
+      <AddValue /> */}
       <WhatWeDo />
     </>
   );
