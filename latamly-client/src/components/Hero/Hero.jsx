@@ -1,49 +1,29 @@
-import React, {useRef} from 'react'
-import styles from "./Hero.module.scss"
-import YouTube from 'react-youtube';
+import React from 'react';
+ import styles from "./Hero.module.scss"
+
+ import { Container } from 'react-bootstrap';
 
 const Hero = () => {
 
-    const opts = {
-      height: '1080',
-      width: '100%',
-      playerVars: {
-        autoplay: 1,
-        loop: 1,
-        mute: 1,
-        controls: 0,
-        showinfo: 0,
-        modestbranding: 1,
-      },
-    }
-    const playerRef = useRef(null);
-    
-    const handlePlayerStateChange = event => {
-      const player = event.target;
-      if (event.data === YouTube.PlayerState.ENDED) {
-        player.playVideo();
-      }
-
-      if (event.data === window.YT.PlayerState.PAUSED) {
-        playerRef.current.internalPlayer.playVideo();
-      }
-    }
-
-    
-
-    
-
   return (
-    
-      <div className={styles.video_background} onClick={() => playerRef.current.internalPlayer.playVideo()}>
-      <YouTube videoId="gy4E8MWT61s" opts={opts} onStateChange={handlePlayerStateChange} ref={playerRef}/>
-      <div className={styles.overlay}>
-        <p className={styles.text1}>involve to evolve</p>
-        <p className={styles.text2}>We expand your business in <b>LATIN AMERICA</b></p>
+
+   
+    <Container fluid className='justify-content-md-center' id={styles.megaContenedor} style={{ padding: 0 }}>
+      <div className={styles.contenido}>
+        <div className={styles.embed_responsive_16by9} >
+          <iframe src="https://www.youtube.com/embed/gy4E8MWT61s?controls=0&autoplay=1&mute=1&showinfo=0&modestbranding=1"></iframe>
+        </div>
+        <div className={styles.overlay}>
+        <p className={styles.text1}><strong>involve to evolve</strong></p>
+        <p className={styles.text2}>We expand your business in <strong>LATIN AMERICA</strong></p>
       </div>
-    </div>
+      </div>
+      
+    </Container>
 
     
+
+
   )
 }
 

@@ -15,16 +15,16 @@ const Header = () => {
           <div className={styles.container_links}>
             <Navbar bg="white" expand="lg">
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Collapse className={styles.button_es} id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                  <Nav.Link href="#">HOME</Nav.Link><span className={styles.button_line}></span>
-                  <Nav.Link href="#">WHAT WE DO</Nav.Link>
-                  <Nav.Link href="#">HOW WE DO IT</Nav.Link>
-                  <Nav.Link href="#">OUR BRANDS</Nav.Link>
-                  <Nav.Link href="#">OUR TEAM</Nav.Link>
-                  <Nav.Link href="#">CONTACT</Nav.Link>
-                  <NavDropdown title="EN" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#">ES</NavDropdown.Item>
+                  <Nav.Link className={styles.NavLinks} href="#">HOME</Nav.Link><span className={styles.button_line}></span>
+                  <Nav.Link className={styles.NavLinks} href="#">WHAT WE DO</Nav.Link>
+                  <Nav.Link className={styles.NavLinks} href="#">HOW WE DO IT</Nav.Link>
+                  <Nav.Link className={styles.NavLinks} href="#">OUR BRANDS</Nav.Link>
+                  <Nav.Link className={styles.NavLinks} href="#">OUR TEAM</Nav.Link>
+                  <Nav.Link className={styles.NavLinks} href="#">CONTACT</Nav.Link>
+                  <NavDropdown className={styles.NavLinks} title="EN" id="basic-nav-dropdown">
+                    <NavDropdown.Item className={styles.dropdown_es} href="#">ES</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>

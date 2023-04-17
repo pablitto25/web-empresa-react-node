@@ -1,48 +1,31 @@
 @import "../../styles/components/hero";
 @import "../../styles/base/variables";
 
-.hero{
-    padding-top: 50px;
-    width: 100vw;
-    height: 100%;
-    overflow: hidden;
-}
 
-.video_background {
-    top: 0;
-    left: 0;
-    width: 100%;
+
+.embed_responsive_16by9 {
+    position: relative;
     height: 0;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-    cursor: default;
-    pointer-events: none;
-    padding-bottom: 56.25%;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 700px;
-    left: 30px;
-    width: 600;
-    height: 300;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    overflow: hidden; /* Agrega esta propiedad */
     
   }
-
-  .text1{
-    font-size: 52px;
-    font-weight: 500;
+  
+  .embed_responsive_16by9 iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+  }
+    
+  .contenido{
+    position: relative;
   }
 
-  .text2{
-    font-size: 22px;
+  .overlay{
+    position: absolute;
+    top:85vh;
+    left: 5vw;
+
   }
