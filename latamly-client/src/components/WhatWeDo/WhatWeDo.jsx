@@ -13,12 +13,12 @@ const WhatWeDo = () => {
           />
           <div className={styles.box_card}>
             <div className={styles.box_card_title}>
-              <h6>Then we develop a business model</h6>
               <img
                 className={styles.box_card_arrow}
                 src="/assets/img/latamly_right_arrow_200x200.png"
                 alt="Arrow latamly group"
               />
+              <h6>Then we develop a business model</h6>
             </div>
             <div className={styles.box_card_content}>
               Distribution network
@@ -38,11 +38,11 @@ const WhatWeDo = () => {
         <div className={styles.box}>
           <div className={`${styles.box_card} ${styles.box_absolute}`}>
             <div className={styles.box_card_title}>
+              <h6>Then we develop a business model</h6>
               <img
                 src="/assets/img/latamly_right_arrow_200x200.png"
                 alt="Arrow latamly group"
               />
-              <h6>Then we develop a business model</h6>
             </div>
             <div className={styles.box_card_content}>
               Distribution network
