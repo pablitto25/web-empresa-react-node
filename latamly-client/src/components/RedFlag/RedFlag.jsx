@@ -3,7 +3,7 @@ import style from "./RedFlag.module.scss";
 
 const RedFlag = () => {
   return (
-    <div className={style.red_flag}>
+    <section className={style.red_flag}>
       <div className="container">
         <div className={style.red_flag_wrapper}>
           <h5>
@@ -16,7 +16,7 @@ const RedFlag = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
