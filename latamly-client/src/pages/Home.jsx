@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <>
       {/* <Header />
-      <Hero />
+      <Hero /> */}
       <AddValue />
-      <WhatWeDo /> */}
+      <WhatWeDo />
       <RedFlag />
     </>
   );

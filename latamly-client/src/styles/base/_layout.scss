@@ -2,7 +2,6 @@
     line-height: 1.5;
     font-weight: 300;
     font-size: 17px;
-    width: 100%;
     
     color-scheme: light dark;
     color: $primary-text-color;
@@ -23,8 +22,7 @@ body {
     place-items: center;
     min-width: 320px;
 }
-
 #root {
-    margin: 0 auto;
     text-align: center;
+    width: 100vw;
 }
