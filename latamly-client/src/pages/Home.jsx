@@ -6,17 +6,19 @@ import RedFlag from "../components/RedFlag/RedFlag";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import HowWeDoIt from "../components/HowWeDoIt/HowWeDoIt";
 import Brands from "../components/Brands/Brands";
+import TeamCarousel from "../components/TeamCarousel/TeamCarousel";
 
 const Home = () => {
   return (
     <>
       {/* <Header />
-      <Hero /> */}
+      <Hero />
       <AddValue />
       <WhatWeDo />
       <RedFlag />
       <HowWeDoIt />
-      <Brands />
+      <Brands /> */}
+      <TeamCarousel />
     </>
   );
 };
