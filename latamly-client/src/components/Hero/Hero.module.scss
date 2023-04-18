@@ -1,7 +1,9 @@
 @import "../../styles/components/hero";
 @import "../../styles/base/variables";
 
-
+.megaContenedor{
+  font-size: 1em;
+}
 
 .embed_responsive_16by9 {
   position: relative;
@@ -12,24 +14,45 @@
   
   .embed_responsive_16by9 iframe {
     position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 100vh;
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
-    
+
   .contenido{
     position: relative;
   }
 
   .overlay{
+    padding-right: 12vw;
+    padding-left: 2vw;
+    padding-top: 4vh;
+    padding-bottom: 8.5vh;
     position: absolute;
-    top:85vh;
-    left: 5vw;
+    top: 76vh;
+    left: 1.5vw;
     color: white;
-
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: left;
+    border-radius: 5px;
   }
+  .text1{
+    font-size: 3em;
+    font-weight: 700;
+    padding-bottom: 1vw;
+  }
+  .text2{
+    font-size: 1.3em;
+    font-weight: bolder;
+  }
+
+  .text3{
+    font-weight: 600;
+  }
+
   @media (min-aspect-ratio: 16/9) {
     .embed_responsive_16by9 iframe {
       /* height = 100 * (9 / 16) = 56.25 */
