@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import RedFlag from "../components/RedFlag/RedFlag";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import HowWeDoIt from "../components/HowWeDoIt/HowWeDoIt";
+import Brands from "../components/Brands/Brands";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <WhatWeDo />
       <RedFlag />
       <HowWeDoIt />
+      <Brands />
     </>
   );
 };
