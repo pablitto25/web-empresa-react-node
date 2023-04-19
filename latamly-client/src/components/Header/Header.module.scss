@@ -9,12 +9,33 @@
     
 }
 
+.container_logo{
+    padding-top: 15px;
+    padding-left: 200px;
+    @media screen and (max-width: $small) {
+      padding-left: 0px;  
+    }
+    @media screen and (max-width: $medium) {
+        padding-left: 0px;  
+      }
+}
+
 .header_container{
     display: flex;
     justify-content: space-around;
     padding-left: 40px;
     padding-right: 270px;
     height: 60px;
+    @media screen and (max-width: $small) {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0px;
+    }
+    @media screen and (max-width: $medium) {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0px;
+    }
 }
 
 .header_link{
@@ -47,28 +68,83 @@
     height: 60px;
 }
 
-.container_logo{
-    padding-top: 15px;
-    padding-left: 200px;
-}
-
 .container_links{
     padding-right: 25px;
 }
 
-.dropdown{
-    padding-top: 8px;
-}
 
 .NavLinks{
     margin-top: 5px;
     color: black;
+    
+    @media screen and (max-width: $small) {
+    border-bottom: 1px solid rgb(228, 228, 228);
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    }
+    @media screen and (max-width: $medium) {
+        border-bottom: 1px solid rgb(228, 228, 228);
+        color: black;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        }
+    
 }
 
 .button_es{
     color: black;
+    @media screen and (max-width: $small) {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: 52vh;
+    background-color: #f3f3f3;
+    z-index: 999;
+    padding-left: 20px;
+    font-size: 1em;
+    text-align: left;
+
+    }
+    @media screen and (max-width: $medium) {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        height: 52vh;
+        background-color: #f3f3f3;
+        z-index: 999;
+        padding-left: 20px;
+        font-size: 1em;
+        text-align: left;
+    
+        }
+    
 }
 
 .dropdown_es{
-    width: 50px;
+    
+    @media screen and (max-width: $small) {
+        color: black;
+        text-align: left;
+        }
+    
+}
+
+
+.NavDropdownBasic{
+    
+    padding-top: 5px;
+    color: black;
+    @media screen and (max-width: $small) {
+        padding-top: 17px;
+        }
+    @media screen and (max-width: $medium) {
+        
+        padding-top: 20px;
+        }
+
 }

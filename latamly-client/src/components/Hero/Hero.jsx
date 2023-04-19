@@ -7,7 +7,6 @@ const Hero = () => {
    
 
   return (
-
     <Container fluid className='justify-content-md-center' id={styles.megaContenedor} style={{ padding: 0 }}>
       <div className={styles.contenido}>
         <div className={styles.embed_responsive_16by9} >
@@ -19,7 +18,6 @@ const Hero = () => {
         </div>
       </div>
     </Container>
-
   )
 }
 
