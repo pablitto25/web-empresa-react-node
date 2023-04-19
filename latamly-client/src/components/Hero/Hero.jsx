@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Hero.module.scss"
 import { Container } from 'react-bootstrap';
-import YouTubeVideo from './YouTubeVideo';
+import HeroVideo from './HeroVideo';
 const Hero = () => {
 
    
@@ -11,7 +11,7 @@ const Hero = () => {
     <Container fluid className='justify-content-md-center' id={styles.megaContenedor} style={{ padding: 0 }}>
       <div className={styles.contenido}>
         <div className={styles.embed_responsive_16by9} >
-          <YouTubeVideo />
+          <HeroVideo />
         </div>
         <div className={styles.overlay}>
           <p className={styles.text1}>involve to evolve</p>

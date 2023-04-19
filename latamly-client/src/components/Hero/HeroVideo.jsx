@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import styles from "./Hero.module.scss"
 
 
-const YouTubeVideo = () => {
+const HeroVideo = () => {
   const playerRef = useRef(null);
 
   useEffect(() => {
@@ -40,4 +40,4 @@ const YouTubeVideo = () => {
   return <div className={styles.embed_responsive_16by9} id="player" />;
 };
 
-export default YouTubeVideo;
+export default HeroVideo;
