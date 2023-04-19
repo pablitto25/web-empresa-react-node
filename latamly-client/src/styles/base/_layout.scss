@@ -1,38 +1,29 @@
 :root {
-    line-height: 1.5;
-    font-weight: 300;
-    font-size: 17px;
-<<<<<<< HEAD
-=======
-    width: 100%;
->>>>>>> 4ed09fbfe0fccc51aece43737f0506c265de45fd
-    
-    color-scheme: light dark;
-    color: $primary-text-color;
-    background-color: #ffffff;
-    
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 17px;
+
+  color-scheme: light dark;
+  color: $primary-text-color;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-<<<<<<< HEAD
-    font-family: 'Raleway' , sans-serif;
-=======
-    font-family: 'Raleway', sans-serif !important;
->>>>>>> 4ed09fbfe0fccc51aece43737f0506c265de45fd
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
 }
 
 #root {
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100vw;
 }

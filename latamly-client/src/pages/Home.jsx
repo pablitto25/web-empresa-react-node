@@ -5,14 +5,13 @@ import Hero from "../components/Hero/Hero";
 import RedFlag from "../components/RedFlag/RedFlag";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 
-
 const Home = () => {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Hero />
       <AddValue />
-      <WhatWeDo /> */}
+      <WhatWeDo />
       <RedFlag />
     </>
   );
