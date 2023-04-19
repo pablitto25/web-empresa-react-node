@@ -2,7 +2,6 @@
 @import "./base/reset";
 @import "./base/variables";
 
-
 // Importar los archivos de estilos de layout
 @import "./base/typografy";
 @import "./base/layout";
@@ -10,13 +9,14 @@
 // Importar los archivos de estilos de pages
 @import "./pages/home";
 
-
 // Importar los archivos de estilos de componentes
 @import "./components/header";
 @import "./components/hero";
 @import "./components/AddValue";
 @import "./components/whatWeDo";
 @import "./components/redFlag";
+@import "./components/howWeDoIt";
+@import "./components/teamCarousel";
 
 // Importar los archivos de estilos de utilidades
 
