@@ -1,78 +1,74 @@
 @import "../../styles/components/hero";
 @import "../../styles/base/variables";
 
-.megaContenedor{
+.megaContenedor {
   font-size: 1em;
 }
 
 .embed_responsive_16by9 {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.embed_responsive_16by9 iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100vw;
   height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.contenido {
+  position: relative;
+}
+
+.overlay {
+  padding-right: 12vw;
+  padding-left: 2vw;
+  padding-top: 4vh;
+  padding-bottom: 8.5vh;
+  position: absolute;
+  top: 76vh;
+  left: 1.5vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  border-radius: 5px;
+
+  @media screen and (max-width: $small) {
+    padding-right: 8vw;
   }
-  
+  @media screen and (max-width: $medium) {
+    padding-left: 6vw;
+    left: 3vw;
+  }
+}
+
+.text1 {
+  font-size: 3em;
+  font-weight: 700;
+  padding-bottom: 1vw;
+}
+.text2 {
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+.text3 {
+  font-weight: 600;
+}
+
+@media (min-aspect-ratio: 16/9) {
   .embed_responsive_16by9 iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+    height: 56.25vw;
   }
-
-  .contenido{
-    position: relative;
+}
+@media (max-aspect-ratio: 16/9) {
+  .embed_responsive_16by9 iframe {
+    width: 177.78vh;
   }
-
-  .overlay{
-    padding-right: 12vw;
-    padding-left: 2vw;
-    padding-top: 4vh;
-    padding-bottom: 8.5vh;
-    position: absolute;
-    top: 76vh;
-    left: 1.5vw;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: left;
-    border-radius: 5px;
-
-    @media screen and (max-width: $small) {
-        padding-right: 8vw;
-
-    }
-      @media screen and (max-width: $medium) {
-          padding-left: 6vw;
-          left: 3vw;
-    }
-  }
-  
-     
-
-  .text1{
-    font-size: 3em;
-    font-weight: 700;
-    padding-bottom: 1vw;
-  }
-  .text2{
-    font-size: 1.3em;
-    font-weight: bolder;
-  }
-
-  .text3{
-    font-weight: 600;
-  }
-
-  @media (min-aspect-ratio: 16/9) {
-    .embed_responsive_16by9 iframe {
-      height: 56.25vw;
-    }
-  }
-  @media (max-aspect-ratio: 16/9) {
-    .embed_responsive_16by9 iframe {
-      width: 177.78vh;
-    }
-  }
-
+}
