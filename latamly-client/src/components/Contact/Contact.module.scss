@@ -1,0 +1,46 @@
+@import "../../styles/components/Contact";
+@import "../../styles/base/variables";
+
+
+.box_container{
+    display: flex;
+    justify-content: center;
+    padding-top: 17vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 0;
+}
+
+.img_contact{
+    padding-right: 2vw;
+    width: 683px;
+    height: 539px;
+}
+
+.titleContact{
+    font-size: 45px;
+    font-weight: 400;
+    
+}
+
+.buttonSend{
+    width: 94px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 26px;
+    margin-left: 16.5vw;
+}
+.buttonSend:hover{
+    color: white;
+    background-color: red;
+}
+.buttonSendText{
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+#formInputs{
+    border: none;
+  box-shadow: none;
+  background-color: transparent;
+}

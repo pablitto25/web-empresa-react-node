@@ -7,6 +7,7 @@ import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import HowWeDoIt from "../components/HowWeDoIt/HowWeDoIt";
 import Brands from "../components/Brands/Brands";
 import TeamCarousel from "../components/TeamCarousel/TeamCarousel";
+import Contact from "../components/Contact/Contact";
 
 const Home = () => {
   return (
@@ -18,7 +19,8 @@ const Home = () => {
       <RedFlag />
       <HowWeDoIt />
       <Brands />
-      <TeamCarousel />
+      {/* <TeamCarousel /> */}
+      <Contact/>
     </>
   );
 };
