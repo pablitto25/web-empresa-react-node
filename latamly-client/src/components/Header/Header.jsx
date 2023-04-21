@@ -17,15 +17,36 @@ const Header = () => {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse className={styles.button_es} id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                  <Nav.Link  className={styles.NavLinks} href="#">HOME</Nav.Link><span className={styles.button_line}></span>
-                  <Nav.Link className={styles.NavLinks} href="#">WHAT WE DO</Nav.Link>
-                  <Nav.Link className={styles.NavLinks} href="#">HOW WE DO IT</Nav.Link>
-                  <Nav.Link className={styles.NavLinks} href="#">OUR BRANDS</Nav.Link>
-                  <Nav.Link className={styles.NavLinks} href="#">OUR TEAM</Nav.Link>
-                  <Nav.Link className={styles.NavLinks} href="#">CONTACT</Nav.Link>
-                  <NavDropdown className={styles.NavDropdownBasic} id="basic-nav-dropdown" title={<span className="text-dark my-auto">EN</span>}>
-                    <NavDropdown.Item className={styles.dropdown_es} href="#">ES</NavDropdown.Item>
-                  </NavDropdown>
+                  <div >
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">HOME</Nav.Link></div>
+                    <div className={styles.button_line}></div>
+                  </div>
+                  <div >
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">WHAT WE DO</Nav.Link></div>
+                    <div className={styles.button_line}></div>
+                  </div>
+                  <div >
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">HOW WE DO IT</Nav.Link></div>
+                    <div className={styles.button_line}></div>
+                  </div>
+                  <div >
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">OUR BRANDS</Nav.Link></div>
+                    <div className={styles.button_line}></div>
+                  </div>
+                  <div >
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">OUR TEAM</Nav.Link></div>
+                    <div className={styles.button_line}></div>
+                  </div>
+                  <div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">CONTACT</Nav.Link></div>
+                    <div className={styles.button_line}></div>
+                  </div>
+                  <div>
+                  <div className={styles.NavDropDCall}><NavDropdown className={styles.NavDropdownBasic} id="basic-nav-dropdown" title={<span className="text-dark my-auto">EN</span>}>
+                     <NavDropdown.Item className={styles.dropdown_es} href="#">ES</NavDropdown.Item>
+                  </NavDropdown></div>
+                  <div className={styles.boxDropDownLine}></div>
+                  </div>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>

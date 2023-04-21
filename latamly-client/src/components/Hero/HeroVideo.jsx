@@ -25,8 +25,10 @@ const HeroVideo = () => {
             if (event.data === window.YT.PlayerState.ENDED) {
               const player = event.target;
               if (player instanceof window.YT.Player) {
-                player.seekTo(0);
-                player.playVideo();
+                if (typeof player.seekTo === 'function') {
+                  player.seekTo(0);
+                  player.playVideo();
+                }
               }
             }
           },

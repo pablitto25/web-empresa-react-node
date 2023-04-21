@@ -47,18 +47,17 @@
 .links:hover{
     color: red;
 }
-.links:hover + .button_line{
-    opacity: 100;
-    transform: scaleX(1);
-}
+
 
 .button_line{
     display: flex;
-    opacity: 0;
+    position: relative;
+    top: 14px;
     border-bottom: 1px solid red;
-    transform: scaleX(0.2);
+    transform: scaleX(0);
     transition: 0.3s;
 }
+
 
 .latamlyLogo{
     width: 140px;
@@ -91,6 +90,20 @@
         
         }
     
+}
+.NavLinks:hover{
+    color: red;
+}
+.boxNavLink:hover + .button_line{
+    transform: scaleX(80%);
+    @media screen and (max-width: $small) {
+        transform: scaleX(0);
+        
+        }
+    @media screen and (max-width: $medium) {
+        transform: scaleX(0);
+        
+        }
 }
 
 .button_es{
@@ -146,4 +159,29 @@
         padding-top: 20px;
         }
 
+}
+.boxMainDropdownBasic{
+    display: flex;
+}
+
+.boxDropDownLine{
+    position: relative;
+    top: 14px;
+    left: -4px;
+    border-bottom: 1px solid red;
+    transform: scaleX(0);
+    /* transform: scaleX(0.6); */
+    transition: 0.3s;
+}
+
+.NavDropDCall:hover + .boxDropDownLine{
+    transform: scaleX(0.6);
+    @media screen and (max-width: $small) {
+        transform: scaleX(0);
+        
+        }
+    @media screen and (max-width: $medium) {
+        transform: scaleX(0);
+        
+        }
 }
