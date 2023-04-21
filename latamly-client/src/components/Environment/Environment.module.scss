@@ -1,0 +1,50 @@
+@import "../../styles/components/environment";
+@import "../../styles/base/variables";
+
+
+
+.MainEnvironment{
+    background-color: #1f2326;
+    height: 30vh;
+    padding-top: 6vh;
+}
+
+.subEnvironment{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.cardEnvironment{
+    display: flex;
+    color: #FFFFFF57;
+    text-align: left;
+}
+.boxCardEnvironment{
+    border-left: 1px solid #FFFFFF57;
+    font-size: 14px;
+    padding-left: 1vh;
+    
+    p{
+        padding-bottom: 0.5vh;
+    }
+}
+.titleEnvironment{
+    text-decoration: none;
+    color: #FFFFFF57;
+    font-size: 0.9em;
+}
+.titleEnvironment:hover{
+    color: white;
+}
+.boxTitle{
+    padding-bottom: 3vh;
+}
+
+.logoEnvironment{
+    width: 5.8vw;
+}
+
+.boxLogoEnvironment{
+    padding-right: 1vw;
+}
