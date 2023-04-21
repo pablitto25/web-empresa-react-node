@@ -23,8 +23,11 @@ const HeroVideo = () => {
           },
           onStateChange: (event) => {
             if (event.data === window.YT.PlayerState.ENDED) {
-              event.target.seekTo(0);
-              event.target.playVideo();
+              const player = event.target;
+              if (player instanceof window.YT.Player) {
+                player.seekTo(0);
+                player.playVideo();
+              }
             }
           },
         },

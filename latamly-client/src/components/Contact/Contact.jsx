@@ -24,9 +24,9 @@ const Contact = () => {
                         <Form.Group className="mb-3" controlId="formSubject" id={styles.formInputs}>
                             <Form.Control className="border-0" type="text" placeholder="Subject*" id={styles.formInputs}/>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formMessage" id={styles.formInputs}>
-
-                            <Form.Control className="border-0" as="textarea" rows={6} placeholder="Message*" id={styles.formInputs}/>
+                        <div className={styles.espacio}></div>
+                        <Form.Group className="mb-3" controlId="formMessage" id={styles.formTextArea}>
+                            <Form.Control className="border-0" as="textarea" rows={5} placeholder="Message*" id={styles.formTextAreaPlaceHolder}/>
                         </Form.Group>
                         <Button className={styles.buttonSend} variant="white" type="submit">
                             <span className={styles.buttonSendText}>Send</span>
