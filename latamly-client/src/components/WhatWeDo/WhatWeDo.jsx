@@ -3,7 +3,7 @@ import styles from "./WhatWeDo.module.scss";
 
 const WhatWeDo = () => {
   return (
-    <section className={styles.what_we_do}>
+    <section className={styles.what_we_do} id="WhatWeDo">
       <h4>What we do</h4>
       <div className={`${styles.what_we_do_wrapper} container`}>
         <div className={styles.box}>

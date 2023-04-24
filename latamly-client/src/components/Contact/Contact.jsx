@@ -4,7 +4,7 @@ import { Form, Button } from 'react-bootstrap'
 
 const Contact = () => {
     return (
-        <div>
+        <div id='Contact'>
             <div className={styles.box_container}>
                 <div>
                     <img className={styles.img_contact} src='/assets/img/girl_latamly-800x631.png' alt='contacto' />

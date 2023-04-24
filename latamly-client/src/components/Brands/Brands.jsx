@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Brands = () => {
   return (
-    <section className={styles.brands}>
+    <section className={styles.brands} id="Brands">
       <div className={`${styles.title} container`}>
         <h4>
           <span>Empowering</span> businesses and brands

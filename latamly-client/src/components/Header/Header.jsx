@@ -22,15 +22,15 @@ const Header = () => {
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">WHAT WE DO</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#WhatWeDo">WHAT WE DO</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">HOW WE DO IT</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#HowWeDolt">HOW WE DO IT</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">OUR BRANDS</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#Brands">OUR BRANDS</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
@@ -38,7 +38,7 @@ const Header = () => {
                     <div className={styles.button_line}></div>
                   </div>
                   <div>
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">CONTACT</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#Contact">CONTACT</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div>
