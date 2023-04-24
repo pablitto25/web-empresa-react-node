@@ -14,7 +14,7 @@ const Header = () => {
           </div>
           <div className={styles.container_links}>
             <Navbar className='justify-content-end' bg="white" expand="lg">
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Toggle className={styles.botonMenu} aria-controls="basic-navbar-nav" />
               <Navbar.Collapse className={styles.button_es} id="basic-navbar-nav">
                 <Nav className="mr-auto">
                   <div >
@@ -43,7 +43,7 @@ const Header = () => {
                   </div>
                   <div>
                   <div className={styles.NavDropDCall}><NavDropdown className={styles.NavDropdownBasic} id="basic-nav-dropdown" title={<span className="text-dark my-auto">EN</span>}>
-                     <NavDropdown.Item className={styles.dropdown_es} href="#">ES</NavDropdown.Item>
+                     <NavDropdown.Item className={styles.dropdown_es} style={{width:'20px'}} href="#">ES</NavDropdown.Item>
                   </NavDropdown></div>
                   <div className={styles.boxDropDownLine}></div>
                   </div>

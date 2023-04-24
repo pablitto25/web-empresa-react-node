@@ -45,3 +45,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.dropdown-menu {
+	--bs-dropdown-min-width: 3.5rem;
+}
+
+.navbar-nav .dropdown-menu {
+    
+
+	@media screen and (max-width: 576px) {
+		position: absolute;
+		width: 110vw;
+		top: 62px;
+		left: -20px;
+		}
+		@media screen and (max-width: 768px) {
+			position: absolute;
+			width: 110vw;
+			top: 62px;
+			left: -21px;
+			}
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}

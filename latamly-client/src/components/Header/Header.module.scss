@@ -58,7 +58,6 @@
     transition: 0.3s;
 }
 
-
 .latamlyLogo{
     width: 140px;
     height: 30px;
@@ -70,8 +69,6 @@
 .container_links{
     padding-right: 25px;
 }
-
-
 .NavLinks{
     margin-top: 5px;
     color: black;
@@ -105,7 +102,6 @@
         
         }
 }
-
 .button_es{
     color: black;
     @media screen and (max-width: $small) {
@@ -136,7 +132,6 @@
         }
     
 }
-
 .dropdown_es{
     
     @media screen and (max-width: $small) {
@@ -145,10 +140,8 @@
         }
     
 }
-
-
 .NavDropdownBasic{
-    
+    min-width:inherit;
     padding-top: 5px;
     color: black;
     @media screen and (max-width: $small) {
@@ -184,4 +177,10 @@
         transform: scaleX(0);
         
         }
+}
+
+.botonMenu{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
 }
