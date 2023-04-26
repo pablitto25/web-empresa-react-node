@@ -1,4 +1,4 @@
-@import "../../styles/components/header";
+@import "../../styles/components/heroOurTeam";
 @import "../../styles/base/variables";
 
 .boxMain{
@@ -29,4 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.textTeam{
+    font-weight: 700;
 }

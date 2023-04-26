@@ -14,7 +14,7 @@ const HeroOurTeam = () => {
                 <img className={styles.logoHero} src='/assets/img/our-team-img.png' alt='Logo hero'/>
             </div>
             <div>
-                <p className={styles.titleHero}>Our <span>Team</span></p>
+                <p className={styles.titleHero}>Our <span className={styles.textTeam}>Team</span></p>
             </div>
         </div>
     </div>

@@ -1,0 +1,51 @@
+@import "../../styles/components/cardsourteam";
+@import "../../styles/base/variables";
+
+
+.cardsOurTeam{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-top: 5vh;
+    width: 100%;
+}
+.imgUser{
+    display: flex;
+    padding-bottom: 2vh;
+    width: 14.1vw;
+}
+.cards{
+    flex-basis: 25%;
+    width: 14.2vw;
+    text-align: left;
+    padding-bottom: 10vh;
+}
+
+.icons{
+    margin-right: 4px;
+    margin-left: 4px;
+    height: 24px;
+    width: 24px;
+}
+/* .leftLine{
+    border-left: 1px solid red;
+    padding-right: 0.3vw;
+
+} */
+.textNombreCompleto{
+    font-weight: 600;
+    padding-bottom: 1vh;
+}
+.textPuesto{
+    font-weight: 400;
+    padding-bottom: 1vh;
+}
+
+.boxIcons{
+    display: flex;
+}
+
+.leftBorder{
+    border-right: 1px solid red;
+}

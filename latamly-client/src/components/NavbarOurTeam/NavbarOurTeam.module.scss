@@ -1,0 +1,38 @@
+@import "../../styles/components/navbarourteam";
+@import "../../styles/base/variables";
+
+
+.boxMain{
+   height: 12vh;
+}
+
+.navbarLinks{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 70px;
+    font-size: 13px;
+    
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+ .boxLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ 
+ .links:hover{
+    color: $red;
+ }
+ .links:hover + .bottomLine{
+    color: $red;
+    border-bottom: 1px solid $red;
+    padding-top: 8px;
+    width: 100%;
+ }
