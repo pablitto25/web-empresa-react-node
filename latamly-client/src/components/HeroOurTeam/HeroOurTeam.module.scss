@@ -1,0 +1,32 @@
+@import "../../styles/components/header";
+@import "../../styles/base/variables";
+
+.boxMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.backgroundHero{
+    width: 100%;
+}
+
+.boxBackground{
+    position: absolute;
+    
+}
+.logoHero{
+    width: 11.3vw;
+}
+.titleHero{
+    font-size: 5.9em;
+    color: white;
+}
+
+.boxTitle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

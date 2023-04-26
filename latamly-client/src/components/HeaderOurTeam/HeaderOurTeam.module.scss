@@ -1,0 +1,44 @@
+@import "../../styles/components/header";
+@import "../../styles/base/variables";
+
+.main{
+    background-color: $red;
+    padding-bottom: 15px;
+}
+.headerOurTeam{
+    display: flex;
+    justify-content: space-between;
+    background-color: $red;
+    height: 12.8vh;
+}
+.imgLogo{
+    width: 10.4vw;
+}
+.boxHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconReturn{
+    width: 38px;
+    margin-right: 10px;
+
+}
+
+.LinkReturn{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.LinkReturn:hover{
+    color: white;
+}
