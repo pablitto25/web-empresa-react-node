@@ -4,21 +4,47 @@
 
 .boxMain{
    height: 12vh;
+
+
+   @media screen and (max-width: $small) {
+      overflow-x: scroll;
+    }
+    @media screen and (max-width: $medium) {
+      overflow-x: scroll;
+    }
 }
 
 .navbarLinks{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 70px;
     font-size: 13px;
+
+    @media screen and (max-width: $small) {
+      display: flex;
+      justify-content: flex-start;
+    }
+    @media screen and (max-width: $medium) {
+      display: flex;
+      justify-content: flex-start;
+    }
     
 }
-
+ 
 .links{
+    
     text-decoration: none;
     color: black;
     font-weight: 400;
     padding-top: 10px;
+
+    @media screen and (max-width: $small) {
+      width: 190px;
+    }
+    @media screen and (max-width: $medium) {
+      width: 190px;
+    }
+    
 }
 
  .boxLink{

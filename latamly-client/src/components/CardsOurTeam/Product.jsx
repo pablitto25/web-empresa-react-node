@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './CardsOurTeam.module.scss'
+import styles from './CardsOurTeamSecond.module.scss'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
@@ -9,9 +9,18 @@ const Product = () =>{
 
     return(
         <Container className={styles.cardsOurTeam}>
+            <div className={styles.boxInfo}>
+            <div className={styles.boxIn}>
+                <p className={styles.titleInfo}>PRODUCT</p>
+                <p className={styles.textoInfo}>We carry out the global search for partners, manufacturers and products for
+                    opportunities detected in the Latin American markets, we carry out the technical analysis and
+                    determine the new income for each territory, supporting the Latamly Group quality seal.</p>
+            </div>
+            </div>
+            <div className={styles.boxCards}>
         <div className={styles.cards}>
             <div>
-                <img className={styles.imgUser} src='/assets/imageUser/210720-LATAMLY-FOTOGRAFIAS-WEB-7.jpg' alt='imagen de persona'/>
+                <img className={styles.imgUser} src='/assets/img/user.jpg' alt='imagen de persona'/>
             </div>
             <div>
                 <div className={styles.textNombreCompleto}>
@@ -139,6 +148,7 @@ const Product = () =>{
                     <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
                 </div>
             </div>
+        </div>
         </div>
     </Container>
     )

@@ -3,6 +3,9 @@ import styles from './CardsOurTeam.module.scss'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
+
+
+
 const All = () =>{
 
 
