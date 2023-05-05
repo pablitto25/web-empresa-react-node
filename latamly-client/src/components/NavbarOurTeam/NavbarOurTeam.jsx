@@ -13,12 +13,12 @@ const NavbarOurTeam = ({setActiveSection}) => {
         <Container className={styles.navbarLinks}>
               <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('all')}><span>ALL</span></Link><span className={styles.bottomLine}></span></div>
               <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('product')}><span>PRODUCT</span></Link><span className={styles.bottomLine}></span></div>
-              <div className={styles.boxLink}><Link to='#' className={styles.links}><span>COMMERCIAL B2B / B2C</span></Link><span className={styles.bottomLine}></span></div>
-              <div className={styles.boxLink}><Link to='#' className={styles.links}><span>MARKETING</span></Link><span className={styles.bottomLine}></span></div>
-              <div className={styles.boxLink}><Link to='#' className={styles.links}><span>ADMINISTRATION & FINANCE</span></Link><span className={styles.bottomLine}></span></div>
-              <div className={styles.boxLink}><Link to='#' className={styles.links}><span>OPERATIONS</span></Link><span className={styles.bottomLine}></span></div>
-              <div className={styles.boxLink}><Link to='#' className={styles.links}><span>STRATEGIC PLANNING</span></Link><span className={styles.bottomLine}></span></div>
-              <div className={styles.boxLink}><Link to='#' className={styles.links}><span>HUMAN RESOURCES</span></Link><span className={styles.bottomLine}></span></div>
+              <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('commercial')}><span>COMMERCIAL B2B / B2C</span></Link><span className={styles.bottomLine}></span></div>
+              <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('marketing')}><span>MARKETING</span></Link><span className={styles.bottomLine}></span></div>
+              <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('administration')}><span>ADMINISTRATION & FINANCE</span></Link><span className={styles.bottomLine}></span></div>
+              <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('operations')}><span>OPERATIONS</span></Link><span className={styles.bottomLine}></span></div>
+              <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('strategic')}><span>STRATEGIC PLANNING</span></Link><span className={styles.bottomLine}></span></div>
+              <div className={styles.boxLink}><Link to='#' className={styles.links} onClick={()=> setActiveSection('rrhh')}><span>HUMAN RESOURCES</span></Link><span className={styles.bottomLine}></span></div>
         </Container>
     </div>
   )

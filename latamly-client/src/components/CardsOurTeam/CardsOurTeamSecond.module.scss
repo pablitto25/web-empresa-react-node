@@ -4,7 +4,19 @@
 
 .cardsOurTeam{
     display: flex;
+    opacity: 0; 
+    animation: fadeIn 0.4s ease-in-out forwards; 
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 
 .boxInfo{
     
@@ -21,7 +33,7 @@
     width: 100%;
     height: 44vh;
     padding: 40px 40px 40px 40px;
-    line-height: 25px;
+    line-height: 27px;
 }
 
 .titleInfo{
@@ -42,11 +54,7 @@
     padding-top: 5vh;
 }
 
-.imgUser{
-    display: flex;
-    height: 28vh;
-    width: 13.5vw;
-}
+
 .cards{
     flex-basis: 25%;
     width: 14.2vw;
@@ -76,4 +84,9 @@
 
 .leftBorder{
     border-right: 1px solid red;
+}
+.imgUser{
+    display: flex;
+    height: 28vh;
+    width: 13.5vw;
 }

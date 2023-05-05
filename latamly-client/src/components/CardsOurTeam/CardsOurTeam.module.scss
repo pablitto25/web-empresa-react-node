@@ -3,13 +3,25 @@
 
 
 .cardsOurTeam{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
     padding-left: 3%;
     padding-top: 5vh;
     width: 100%;
+
+    opacity: 0; 
+    animation: fadeIn 0.4s ease-in-out forwards;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 .imgUser{
     display: flex;
     padding-bottom: 2vh;
