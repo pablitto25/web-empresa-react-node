@@ -7,7 +7,7 @@ const HeroVideo = () => {
 
   useEffect(() => {
     window.YT.ready(() => {
-      playerRef.current = new window.YT.Player('player', {
+      playerRef.current = new window.YT.Player('controlId', {
         videoId: 'gy4E8MWT61s',
         playerVars: {
           autoplay: 1,
@@ -42,7 +42,7 @@ const HeroVideo = () => {
     };
   }, []);
 
-  return <div className={styles.embed_responsive_16by9} id="player" />;
+  return <div className={styles.embed_responsive_16by9} id="controlId" />;
 };
 
 export default HeroVideo;
