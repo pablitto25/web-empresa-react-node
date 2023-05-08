@@ -6,15 +6,32 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+
+    @media screen and (max-width: $small) {
+        height: 18vh;
+      }
+    @media screen and (max-width: $medium) {
+        height: 26vh;
+      }
 }
 
 .backgroundHero{
     width: 100%;
+    @media screen and (max-width: $small) {
+        height: 20vh;
+        object-fit: cover;
+      }
+    @media screen and (max-width: $medium) {
+        height: 26vh;
+        object-fit: cover;
+      }
 }
 
 .boxBackground{
     position: absolute;
-    
+    @media screen and (max-width: $medium) {
+        height: 26vh;
+      }
 }
 .logoHero{
     width: 11.3vw;
@@ -22,6 +39,9 @@
 .titleHero{
     font-size: 5.9em;
     color: white;
+    @media screen and (max-width: $small) {
+        font-size: 4em;
+      }
 }
 
 .boxTitle{

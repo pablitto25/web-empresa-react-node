@@ -6,6 +6,16 @@
     display: flex;
     opacity: 0; 
     animation: fadeIn 0.4s ease-in-out forwards; 
+
+    
+    @media screen and (max-width: $small) {
+        display: flex;
+        flex-direction: column;
+      }
+      @media screen and (max-width: $medium) {
+        display: flex;
+        flex-direction: column;
+      }
 }
 
 @keyframes fadeIn {
@@ -25,6 +35,17 @@
     width: 350px;
     height: 350px;
     text-align: left;
+
+    @media screen and (max-width: $small) {
+        width: 100%;
+        height: 35vh;
+        
+      }
+      @media screen and (max-width: $medium) {
+        width: 100%;
+        height: 35vh;
+        
+      }
 }
 
 .boxIn{
@@ -34,6 +55,12 @@
     height: 44vh;
     padding: 40px 40px 40px 40px;
     line-height: 27px;
+    @media screen and (max-width: $small) {
+        height: 32vh;
+      }
+      @media screen and (max-width: $medium) {
+        height: 32vh;
+      }
 }
 
 .titleInfo{
@@ -52,6 +79,12 @@
     padding-left: 3vw;
     padding-right: 6vw;
     padding-top: 5vh;
+    @media screen and (max-width: $small) {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        padding-left: 0;
+      }
+      
 }
 
 
@@ -60,6 +93,16 @@
     width: 14.2vw;
     text-align: left;
     padding-bottom: 10vh;
+    @media screen and (max-width: $small) {
+        width: 40vw;
+        margin: 15px;
+      }
+      @media screen and (max-width: $medium) {
+        padding-bottom: 0;
+        width: 24vw;
+        margin: 15px;
+      }
+      
 }
 
 .icons{
@@ -89,4 +132,12 @@
     display: flex;
     height: 28vh;
     width: 13.5vw;
+    @media screen and (max-width: $small) {
+        width: 42vw;
+      }
+      @media screen and (max-width: $medium) {
+        width: 26vw;
+        height: 25vh;
+      }
+      
 }

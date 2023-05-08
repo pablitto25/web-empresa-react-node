@@ -8,9 +8,15 @@
     padding-left: 3%;
     padding-top: 5vh;
     width: 100%;
-
     opacity: 0; 
     animation: fadeIn 0.4s ease-in-out forwards;
+
+    @media screen and (max-width: $small) {
+        grid-template-columns: repeat(2 , 1fr);
+      }
+      @media screen and (max-width: $medium) {
+        grid-template-columns: repeat(3 , 1fr);
+      }
 }
 
 @keyframes fadeIn {
@@ -26,12 +32,27 @@
     display: flex;
     padding-bottom: 2vh;
     width: 14.1vw;
+    @media screen and (max-width: $small) {
+        width: 40vw;
+      }
+      @media screen and (max-width: $medium) {
+        width: 27vw;
+      }
 }
 .cards{
     flex-basis: 25%;
     width: 14.2vw;
     text-align: left;
     padding-bottom: 10vh;
+    @media screen and (max-width: $small) {
+        padding-bottom: 2vh;
+        padding-left: 1.5vw;
+      }
+      @media screen and (max-width: $medium) {
+        padding-bottom: 2vh;
+        padding-left: 1.5vw;
+        width: 30vw;
+      }
 }
 
 .icons{
@@ -40,14 +61,12 @@
     height: 24px;
     width: 24px;
 }
-/* .leftLine{
-    border-left: 1px solid red;
-    padding-right: 0.3vw;
 
-} */
+
 .textNombreCompleto{
     font-weight: 600;
     padding-bottom: 1vh;
+
 }
 .textPuesto{
     font-weight: 400;
@@ -61,3 +80,5 @@
 .leftBorder{
     border-right: 1px solid red;
 }
+
+

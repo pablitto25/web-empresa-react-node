@@ -4,8 +4,7 @@
 
 .boxMain{
    height: 12vh;
-
-
+   
    @media screen and (max-width: $small) {
       overflow-x: scroll;
     }
@@ -37,12 +36,14 @@
     color: black;
     font-weight: 400;
     padding-top: 10px;
+  
 
     @media screen and (max-width: $small) {
       width: 190px;
     }
     @media screen and (max-width: $medium) {
-      width: 190px;
+      white-space: nowrap;
+      width: 100%;
     }
     
 }
@@ -51,6 +52,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media screen and (max-width: $small) {
+      padding-right: 3vw;
+    }
+    @media screen and (max-width: $medium) {
+      padding-right: 3vw;
+    }
  }
  
  .links:hover{

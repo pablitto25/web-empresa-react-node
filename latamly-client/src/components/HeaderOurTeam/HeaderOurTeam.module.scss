@@ -13,6 +13,9 @@
 }
 .imgLogo{
     width: 10.4vw;
+    @media screen and (max-width: $small) {
+        width: 25vw;
+      }
 }
 .boxHeader{
     display: flex;
@@ -37,6 +40,9 @@
     font-size: 1.1em;
     font-weight: 400;
     transition: 0.3s;
+    @media screen and (max-width: $small) {
+        display: none;
+      }
 }
 
 .LinkReturn:hover{
