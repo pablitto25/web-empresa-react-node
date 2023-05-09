@@ -4,6 +4,7 @@
 
 .cardsOurTeam{
     display: flex;
+
     opacity: 0; 
     animation: fadeIn 0.4s ease-in-out forwards; 
 
@@ -133,10 +134,12 @@
     padding-top: 2vh;
     font-weight: 600;
     padding-bottom: 1vh;
+    font-size: 0.9em;
 }
 .textPuesto{
     font-weight: 400;
     padding-bottom: 1vh;
+    font-size: 0.8em;
 }
 
 .boxIcons{
@@ -145,4 +148,48 @@
 
 .leftBorder{
     border-right: 1px solid red;
+}
+
+.b2b {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  background-color: red;
+  color: white;
+  font-weight: 400;
+  padding: 2px 5px;
+  border-radius: 3px;
+
+  @media screen and (max-width: $medium) {
+    top: 15%;
+    left: 90%;
+  }
+
+  @media screen and (max-width: $small) {
+    top: 15%;
+    left: 85%;
+  }
+}
+
+.b2c {
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  padding: 2px 5px;
+  border-radius: 3px;
+  @media screen and (max-width: $medium) {
+    top: 15%;
+    left: 90%;
+  }
+  @media screen and (max-width: $small) {
+    top: 15%;
+    left: 85%;
+  }
 }

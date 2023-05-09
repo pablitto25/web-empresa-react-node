@@ -7,15 +7,17 @@
     grid-template-columns: repeat(4 , 1fr);
     padding-left: 3%;
     padding-top: 5vh;
-    width: 100%;
+    width: 68vw;
     opacity: 0; 
     animation: fadeIn 0.4s ease-in-out forwards;
 
     @media screen and (max-width: $small) {
         grid-template-columns: repeat(2 , 1fr);
+        width: auto;
       }
       @media screen and (max-width: $medium) {
         grid-template-columns: repeat(3 , 1fr);
+        width: auto;
       }
 }
 
@@ -66,11 +68,13 @@
 .textNombreCompleto{
     font-weight: 600;
     padding-bottom: 1vh;
+    font-size: 0.9em;
 
 }
 .textPuesto{
     font-weight: 400;
     padding-bottom: 1vh;
+    font-size: 0.8em;
 }
 
 .boxIcons{

@@ -2,10 +2,37 @@ import React from 'react'
 import styles from './CardsOurTeamSecond.module.scss'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
+import {useState, useEffect} from 'react'
+
+const URI = process.env.REACT_APP_API_OURTEAM_COMMERCIAL_B2B
+const URI2 = process.env.REACT_APP_API_OURTEAM_COMMERCIAL_B2C
+const URI_IMG = process.env.REACT_APP_API_IMG
+
 
 const Commercial = () =>{
 
+    const [ourTeam,setOurTeam] = useState([]);
+    useEffect( ()=>{
+        getOurTeam()
+    },[]);
 
+    //procedimiento para mostrar todos los blogs
+    const getOurTeam = async () =>{
+        const res = await axios.get(URI);
+        setOurTeam(res.data);
+    };
+
+
+    const [ourTeam2,setOurTeam2] = useState([]);
+    useEffect( ()=>{
+        getOurTeam2()
+    },[]);
+
+    const getOurTeam2 = async () =>{
+        const res = await axios.get(URI2);
+        setOurTeam2(res.data);
+    };
 
     return(
         <Container>
@@ -19,138 +46,28 @@ const Commercial = () =>{
             </div>
             </div>
             <div className={styles.boxCards}>
-        <div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/img/user.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div>
-        <div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/210720-LATAMLY-FOTOGRAFIAS-WEB-17.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
+            {ourTeam.map( (ourTeam)=> (
+                
+            <div className={styles.cards} key={ourTeam.id}>
+                    <div style={{ position: 'relative' }}>
+                        <img className={styles.imgUser} src={`${URI_IMG + ourTeam.ourteam_img_url}`} alt='imagen de persona' />
+                        <div className={styles.b2b}>B2B</div>
+                    </div>
+                <div>
+                    <div className={styles.textNombreCompleto}>
+                        <p>{ourTeam.ourteam_fullname}</p>
+                    </div>
+                    <div className={styles.textPuesto}>
+                        <p>{ourTeam.ourteam_postEn}</p>
+                    </div>
+                    <div className={styles.boxIcons}>
+                        <div className={styles.leftBorder}><Link to={`mailto:${ourTeam.ourteam_mail}`}><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
+                        <Link to={`${ourTeam.ourteam_linkedinUrl}`}><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
+                    </div>
                 </div>
             </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/210723-LATAMLY-FOTOGRAFIAS-WEB-38-1.jpg' alt='imagen de persona'/>
+            ))}
             </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div>
-        <div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/Sebastian-Olmedo-Latamly.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221212-SHIPIN-FOTOS-STAFF-DAI-KOWALCZUK.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221205-Latamly-Eliana-Rocci.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221212-SHIPIN-FOTOS-STAFF-PAU-ROME.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221205-Latamly-Yesica-Amaranto.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div>
-        </div>
         </div>
         
                                                                 {/* B2C */}    
@@ -164,138 +81,28 @@ const Commercial = () =>{
             </div>
             </div>
             <div className={styles.boxCards}>
-        <div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/img/user.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div>
-        <div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/210720-LATAMLY-FOTOGRAFIAS-WEB-17.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
+            {ourTeam2.map( (ourTeam2)=> (
+                
+            <div className={styles.cards} key={ourTeam2.id}>
+                <div style={{ position: 'relative' }}>
+                        <img className={styles.imgUser} src={`${URI_IMG + ourTeam2.ourteam_img_url}`} alt='imagen de persona' />
+                        <div className={styles.b2c}>B2C</div>
+                    </div>
+                <div>
+                    <div className={styles.textNombreCompleto}>
+                        <p>{ourTeam2.ourteam_fullname}</p>
+                    </div>
+                    <div className={styles.textPuesto}>
+                        <p>{ourTeam2.ourteam_postEn}</p>
+                    </div>
+                    <div className={styles.boxIcons}>
+                        <div className={styles.leftBorder}><Link to={`mailto:${ourTeam2.ourteam_mail}`}><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
+                        <Link to={`${ourTeam2.ourteam_linkedinUrl}`}><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
+                    </div>
                 </div>
             </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/210723-LATAMLY-FOTOGRAFIAS-WEB-38-1.jpg' alt='imagen de persona'/>
+            ))}
             </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div>
-        <div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/Sebastian-Olmedo-Latamly.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221212-SHIPIN-FOTOS-STAFF-DAI-KOWALCZUK.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221205-Latamly-Eliana-Rocci.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221212-SHIPIN-FOTOS-STAFF-PAU-ROME.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div><div className={styles.cards}>
-            <div>
-                <img className={styles.imgUser} src='/assets/imageUser/221205-Latamly-Yesica-Amaranto.jpg' alt='imagen de persona'/>
-            </div>
-            <div>
-                <div className={styles.textNombreCompleto}>
-                    <p>Nombre Completo</p>
-                </div>
-                <div className={styles.textPuesto}>
-                    <p>Puesto de Trabajo</p>
-                </div>
-                <div className={styles.boxIcons}>
-                    <div className={styles.leftBorder}><Link to='mailto:latamly@latamly.com'><img className={styles.icons} src='/assets/img/icon-email.png' alt='icono de email'/></Link></div>
-                    <Link to='#'><img className={styles.icons} src='/assets/img/icon-linkedin.png' alt='icono de linkedin'/></Link>
-                </div>
-            </div>
-        </div>
-        </div>
         </div>           
     </Container>
 

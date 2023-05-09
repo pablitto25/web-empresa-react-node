@@ -3,7 +3,7 @@
 
 
 .boxMain{
-   height: 12vh;
+   height: 15vh;
    
    @media screen and (max-width: $small) {
       overflow-x: scroll;
@@ -18,7 +18,7 @@
     justify-content: space-evenly;
     padding-top: 70px;
     font-size: 12px;
-
+    
     @media screen and (max-width: $small) {
       display: flex;
       justify-content: flex-start;
@@ -36,7 +36,7 @@
     color: black;
     font-weight: 400;
     padding-top: 10px;
-  
+    white-space: nowrap;
 
     @media screen and (max-width: $small) {
       width: 190px;
