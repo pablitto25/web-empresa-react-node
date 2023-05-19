@@ -1,44 +1,32 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import {useState, useEffect} from 'react';
+import React from 'react'
 import styles from './Header.module.scss'
 import {Link} from 'react-router-dom'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
-const spanish = process.env.REACT_APP_API_NAVBAR_ES;
-const english = process.env.REACT_APP_API_NAVBAR_EN;
 
+const URI = process.env.REACT_APP_API_NAVBAR;
 
 const Header = () => {
 
-  const [activeSection, setActiveSection] = useState(english);
-
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    const isSpanish = currentPath === '/es';
-    setActiveSection(isSpanish ? spanish : english);
-    getLang(isSpanish ? spanish : english);
-  }, []);
-
-  const getLang = async (section) => {
-    const res = await axios.get(section);
-    setLang(res.data);
-  };
-
   const [lang, setLang] = useState([]);
 
-  const data = lang.cont_json ? JSON.parse(lang.cont_json) : null;
-    
-    if (data !== null) {
-      const navbarItems = data.navbar[0];
-      var value1 = navbarItems["1"];
-      var value2 = navbarItems["2"];
-      var value3 = navbarItems["3"];
-      var value4 = navbarItems["4"];
-      var value5 = navbarItems["5"];
-      var value6 = navbarItems["6"];
-    }
-    
+  useEffect(() => {
+    getLang()
+  }, []);
 
+  //procedimiento para mostrar todos los blogs
+  const getLang = async () => {
+    const res = await axios.get(URI);
+    setLang(res.data);
+  };
+  const data = lang.cont_json ? JSON.parse(lang.cont_json) : null;
+  if (data !== null) {
+    const navbarItems = data["en"][0];
+    console.log(navbarItems[1]);
+  }
+  
   return (
     
     <div className={styles.header}>
@@ -53,27 +41,27 @@ const Header = () => {
               <Navbar.Collapse className={styles.button_es} id="basic-navbar-nav">
                 <Nav className="mr-auto">
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">{value1}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#">HOME</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#WhatWeDo">{value2}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#WhatWeDo">WHAT WE DO</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#HowWeDolt">{value3}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#HowWeDolt">HOW WE DO IT</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#Brands">{value4}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#Brands">OUR BRANDS</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="/our-team">{value5}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="/our-team">OUR TEAM</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div>
-                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#Contact">{value6}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link  className={styles.NavLinks} href="#Contact">CONTACT</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div>
