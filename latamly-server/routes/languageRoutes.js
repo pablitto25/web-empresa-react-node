@@ -6,7 +6,7 @@ import { getNavbarByLanguage} from '../controllers/LangController.js';
 
 const router = express.Router();
 
-router.get('/:lang', getNavbarByLanguage);
+router.get('/:name/:lang', getNavbarByLanguage);
 
 
 

@@ -16,7 +16,7 @@ const HeaderOurTeam = () =>{
                     <Link to='/'><img className={styles.iconReturn} src='/assets/img/icon-return.png' alt='icono flecha atras'/></Link>
                 </div>
                 <div className={styles.boxReturn}>
-                    <Link to='/' className={styles.LinkReturn}><span>Return Home</span></Link>
+                    <a href='/' className={styles.LinkReturn}><span>Return Home</span></a>
                 </div>
             </div>
         </div>

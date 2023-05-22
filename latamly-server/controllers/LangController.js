@@ -3,7 +3,7 @@ import ContentModel from '../models/ContentModel.js';
 
 export const getNavbarByLanguage = async(req,res) => {
     try {
-        const brands = await ContentModel.findAll({ where: {cont_name:'navbar', cont_languaje:req.params.lang,  cont_type: 'lang'}});
+        const brands = await ContentModel.findAll({ where: {cont_name:req.params.name, cont_languaje:req.params.lang,  cont_type: 'lang'}});
         if(Object.keys(brands).length === 0){
             
             res.json({"message" : "No brands found"});
