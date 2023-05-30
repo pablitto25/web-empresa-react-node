@@ -6,12 +6,12 @@ const HeroVideo = () => {
 
   useEffect(() => {
     let player;
-
+  
     const onPlayerReady = (event) => {
       player = event.target;
       player.playVideo();
     };
-
+  
     const onPlayerStateChange = (event) => {
       if (event.data === window.YT.PlayerState.ENDED) {
         if (player && typeof player.seekTo === 'function') {
@@ -20,17 +20,17 @@ const HeroVideo = () => {
         }
       }
     };
-
+  
     const loadYouTubePlayer = () => {
-      if (window.YT && window.YT.Player) {
-        // Si la API de YouTube ya está cargada, crea el reproductor inmediatamente
-        createPlayer();
-      } else {
-        // Si la API de YouTube aún no está cargada, espera hasta que se cargue antes de crear el reproductor
-        window.onYouTubeIframeAPIReady = createPlayer;
+      if (process.env.NODE_ENV === 'production' && window.location.protocol === 'https:') {
+        if (window.YT && window.YT.Player) {
+          createPlayer();
+        } else {
+          window.onYouTubeIframeAPIReady = createPlayer;
+        }
       }
     };
-
+  
     const createPlayer = () => {
       playerRef.current = new window.YT.Player('controlId', {
         videoId: 'gy4E8MWT61s',
@@ -48,17 +48,17 @@ const HeroVideo = () => {
         },
       });
     };
-
+  
     loadYouTubePlayer();
-
+  
     return () => {
-      // Destruye el reproductor cuando el componente se desmonta
       if (playerRef.current) {
         playerRef.current.destroy();
       }
-      delete window.onYouTubeIframeAPIReady; // Elimina la función global utilizada para crear el reproductor
+      delete window.onYouTubeIframeAPIReady;
     };
   }, []);
+  
 
   return <div className={styles.embed_responsive_16by9} id="controlId" />;
 };

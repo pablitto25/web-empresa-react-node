@@ -6,10 +6,8 @@ import OurTeam from './pages/OurTeam';
 
 
 function App() {
-
-
-
   return (
+    
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -20,6 +18,7 @@ function App() {
       </BrowserRouter>
     
     </div>
+    
   );
 }
 
