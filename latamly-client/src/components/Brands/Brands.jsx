@@ -33,7 +33,7 @@ const getLang = async () => {
 };
   /* End Language */
 
-  
+   
   return (
     <section className={styles.brands} id="Brands">
       <div className={`${styles.title} container`}>
