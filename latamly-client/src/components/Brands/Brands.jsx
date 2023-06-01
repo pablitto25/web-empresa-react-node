@@ -14,16 +14,9 @@ const [data, setData] = useState([]);
 const { lg } = useContext(LangContext);
 
 useEffect(() => {
-  getLang()
-}, []);
-
-const getLang = async () => {
-  const res = await axios.get(URI);
-  setLang(res.data);
-};
-
-useEffect(() => {
-let output;
+  getLang();
+  let output;
+  
 lg === '/'? output = 'en' : output = 'sp';
 if (lang.cont_json) {
   const value = JSON.parse(lang.cont_json);
@@ -34,9 +27,13 @@ if (lang.cont_json) {
 }
 }, [lang,lg]);
 
-console.log(data.marcas);
-/*End Language */
+const getLang = async () => {
+  const res = await axios.get(URI);
+  setLang(res.data);
+};
+  /* End Language */
 
+  
   return (
     <section className={styles.brands} id="Brands">
       <div className={`${styles.title} container`}>
@@ -45,7 +42,7 @@ console.log(data.marcas);
         </h4>
       </div>
       <div className={styles.brands_container}>
-        {data.marcas.map((marca, index) =>(
+        {data.marcas && data.marcas.map((marca, index) =>(
           <Link to={marca.link}key={index} className={styles.brand} style={{backgroundImage: marca.background}}>
           <article>
             <div className={styles.brand_logo}>
