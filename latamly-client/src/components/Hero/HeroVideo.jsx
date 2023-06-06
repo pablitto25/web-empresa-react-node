@@ -22,13 +22,13 @@ const HeroVideo = () => {
     };
   
     const loadYouTubePlayer = () => {
-      if (process.env.NODE_ENV === 'production' && window.location.protocol === 'https:') {
+      /* if (process.env.NODE_ENV === 'production' && window.location.protocol === 'https:') { */
         if (window.YT && window.YT.Player) {
           createPlayer();
         } else {
           window.onYouTubeIframeAPIReady = createPlayer;
         }
-      }
+      /* } */
     };
   
     const createPlayer = () => {

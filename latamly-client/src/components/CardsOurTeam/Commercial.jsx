@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { LangContext } from '../Context/LangContext'
 import styles from './CardsOurTeamSecond.module.scss'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import {useState, useEffect} from 'react'
 
 const URI = process.env.REACT_APP_API_OURTEAM_COMMERCIAL_B2B
 const URI2 = process.env.REACT_APP_API_OURTEAM_COMMERCIAL_B2C
 const URI_IMG = process.env.REACT_APP_API_IMG
-
+const URI_TEXTCARD = process.env.REACT_APP_API_CARD_CONTENT_OURTEAM
 
 const Commercial = () =>{
 
@@ -34,15 +34,40 @@ const Commercial = () =>{
         setOurTeam2(res.data);
     };
 
+        /* Start Language */
+const [lang, setLang] = useState([]);
+const [data, setData] = useState([]);
+const { lg } = useContext(LangContext);
+
+useEffect(() => {
+  getLang()
+}, []);
+
+const getLang = async () => {
+  const res = await axios.get(URI_TEXTCARD);
+  setLang(res.data);
+};
+
+useEffect(() => {
+let output;
+lg === '/our-team'? output = 'en' : output = 'sp';
+if (lang.cont_json) {
+  const value = JSON.parse(lang.cont_json);
+
+  if (value.hasOwnProperty(output) && Array.isArray(value[output]) && value[output].length > 0) {
+    setData(value[output][0]);
+  }
+}
+}, [lang,lg]);
+/*End Language */
+
     return(
         <Container>
             <div className={styles.cardsOurTeam}>
             <div className={styles.boxInfo}>
             <div className={styles.boxIn}>
-                    <p className={styles.titleInfo}>COMMERCIAL B2B</p>
-                    <p className={styles.textoInfo}>We build solid business links throughout the territory, coordinate
-                        their implementation and compliance, develop performance indicators
-                        and measure actions based on their future profitability.</p>
+                    <p className={styles.titleInfo}>{data.commercialb2b}</p>
+                    <p className={styles.textoInfo}>{data.commercialb2bContent}</p>
             </div>
             </div>
             <div className={styles.boxCards}>
@@ -74,10 +99,8 @@ const Commercial = () =>{
                                                                 <div className={styles.cardsOurTeam}>
             <div className={styles.boxInfo}>
             <div className={styles.boxIn}>
-                        <p className={styles.titleInfo}>COMMERCIAL B2C</p>
-                        <p className={styles.textoInfo}>We comprehensively develop retail marketing through scalable and
-                            replicable e-commerce models in different Latin American markets, with
-                            a strong focus on customer experience.</p>
+                        <p className={styles.titleInfo}>{data.commercialb2c}</p>
+                        <p className={styles.textoInfo}>{data.commercialb2cContent}</p>
             </div>
             </div>
             <div className={styles.boxCards}>

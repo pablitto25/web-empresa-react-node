@@ -7,6 +7,7 @@ import ourteamRoutes from './routes/ourteamRoutes.js';
 import hubsRouter from './routes/hubsRoutes.js';
 import languageRoutes from './routes/languageRoutes.js';
 import multer from 'multer';
+import contactRoutes from './routes/contactRoutes.js';
 
 const app = express();
 app.use(express.json());
@@ -35,6 +36,7 @@ app.use('/brands', brandsRoutes);
 app.use('/ourteam', ourteamRoutes);
 app.use('/hubs', hubsRouter);
 app.use('/es', languageRoutes);
+app.use('/contact', contactRoutes);
 
 
 app.post('/upload', upload.single('file'), (req, res) => {

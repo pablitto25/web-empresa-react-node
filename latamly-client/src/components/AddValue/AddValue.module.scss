@@ -45,14 +45,18 @@
         }
         .bullet_card{
             padding: 0 40px;
+            width: 20vw;
             @media screen and (max-width: $large) {
                 padding: 0;
+                
             }
             @media screen and (max-width: $medium) {
                 height: 200px;
+                width: 70vw;
             }
             @media screen and (max-width: $small) {
-                height: 250px;
+                height: 150px;
+                
             }
             h4{
                 font-weight: 400;

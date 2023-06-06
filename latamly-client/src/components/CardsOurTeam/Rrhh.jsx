@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { LangContext } from '../Context/LangContext'
 import styles from './CardsOurTeamSecond.module.scss'
 import {Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import {useState, useEffect} from 'react'
+
 
 const URI = process.env.REACT_APP_API_OURTEAM_RRHH
 const URI_IMG = process.env.REACT_APP_API_IMG
+const URI_TEXTCARD = process.env.REACT_APP_API_CARD_CONTENT_OURTEAM
 
 const Rrhh = () =>{
 
@@ -21,14 +23,39 @@ const Rrhh = () =>{
         setOurTeam(res.data);
     };
 
+    /* Start Language */
+const [lang, setLang] = useState([]);
+const [data, setData] = useState([]);
+const { lg } = useContext(LangContext);
+
+useEffect(() => {
+  getLang()
+}, []);
+
+const getLang = async () => {
+  const res = await axios.get(URI_TEXTCARD);
+  setLang(res.data);
+};
+
+useEffect(() => {
+let output;
+lg === '/our-team'? output = 'en' : output = 'sp';
+if (lang.cont_json) {
+  const value = JSON.parse(lang.cont_json);
+
+  if (value.hasOwnProperty(output) && Array.isArray(value[output]) && value[output].length > 0) {
+    setData(value[output][0]);
+  }
+}
+}, [lang,lg]);
+/*End Language */
+
     return(
         <Container className={styles.cardsOurTeam}>
             <div className={styles.boxInfo}>
             <div className={styles.boxIn}>
-                    <p className={styles.titleInfo}>HUMAN RESOURCES</p>
-                    <p className={styles.textoInfo}>We work to enhance the capacities and increase the well-being of those who are part of Latamly,
-                     betting on individual development in a healthy and challenging workplace. Likewise,
-                      we seek to align individual needs with business needs in an equitable and competitive manner.</p>
+                    <p className={styles.titleInfo}>{data.rrhh}</p>
+                    <p className={styles.textoInfo}>{data.rrhhContent}</p>
             </div>
             </div>
             <div className={styles.boxCards}>

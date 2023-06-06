@@ -66,7 +66,7 @@ useEffect(() => {
                     <div className={styles.button_line}></div>
                   </div>
                   <div >
-                    <div className={styles.boxNavLink}><Nav.Link className={styles.NavLinks} href="/our-team">{data["ourteam"]}</Nav.Link></div>
+                    <div className={styles.boxNavLink}><Nav.Link className={styles.NavLinks} href={data.link}>{data["ourteam"]}</Nav.Link></div>
                     <div className={styles.button_line}></div>
                   </div>
                   <div>

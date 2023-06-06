@@ -38,14 +38,17 @@
   background-color: rgba(0, 0, 0, 0.7);
   text-align: left;
   border-radius: 5px;
-
-  @media screen and (max-width: $small) {
-    padding-right: 8vw;
-  }
   @media screen and (max-width: $medium) {
     padding-left: 6vw;
     left: 3vw;
   }
+  @media screen and (max-width: $small) {
+    padding-right: 8vw;
+  }
+  @media screen and (max-width: 450px) {
+    top: 70vh;
+  }
+  
 }
 
 .text1 {

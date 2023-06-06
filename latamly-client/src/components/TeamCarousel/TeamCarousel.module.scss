@@ -1,6 +1,140 @@
 @import "./../../styles/components/teamCarousel";
 @import "./../../styles/base/variables";
-.team_carousel{
-    background-color: $red;
-    height: 500px;
+.team_carousel {
+  background-color: $red;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h5 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    top: 5vw;
+    ::before,
+    ::after {
+      content: "";
+      position: absolute;
+      width: 76px;
+      height: 110px;
+      background-image: url("./../../../public/assets/img/latamly_y_asset.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    ::before {
+      left: -35vw;
+      top: -1vw;
+      @media screen and (max-width: $large) {
+        left: -30vw;
+      }
+      @media screen and (max-width: $medium) {
+        display: none;
+      }
+    }
+    ::after {
+      left: 50vw;
+      top: 25vw;
+      @media screen and (max-width: $extra-extra-large) {
+        display: none;
+      }
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+  .team_carousel_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @media screen and (min-width: 1500px) {
+      max-width: 1500px;
+    }
+  }
+  .swiper_team {
+    max-height: 100vh;
+    min-height: 0;
+    min-width: 0;
+    .swiper_img {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
+    }
+    .swiper_caption {
+      position: relative;
+      border-bottom: 1px solid #fff;
+      padding: 1rem 0 5px;
+      margin: auto;
+      width: 80%;
+      max-width: 250px;
+      text-align: left;
+      color: #fff;
+      @media screen and (min-width: $medium) {
+        width: 90%;
+      }
+      h4 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        margin: 0;
+      }
+      .social {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        position: absolute;
+        right: -5px;
+        bottom: 8px;
+        li {
+          height: 20px;
+          padding: 0 6px;
+          a {
+            padding: 0;
+            height: 20px;
+            display: block;
+            svg {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  h6 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    a {
+      color: #000000;
+      border-left: 1px solid #000000;
+      border-right: 1px solid #000000;
+      margin: 0 20px;
+      padding: 10px 30px;
+      font-size: 4rem;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      p {
+        display: inline;
+        font-size: 1rem;
+        color: #ffffff;
+      }
+    }
+  }
 }

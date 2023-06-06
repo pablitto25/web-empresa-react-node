@@ -6,7 +6,7 @@ import RedFlag from "../components/RedFlag/RedFlag";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
 import HowWeDoIt from "../components/HowWeDoIt/HowWeDoIt";
 import Brands from "../components/Brands/Brands";
-/* import TeamCarousel from "../components/TeamCarousel/TeamCarousel"; */
+import TeamCarousel from "../components/TeamCarousel/TeamCarousel";
 import Contact from "../components/Contact/Contact";
 import Environment from "../components/Environment/Environment";
 import Footer from "../components/Footer/Footer";
@@ -23,7 +23,7 @@ const Home = () => {
         <RedFlag />
         <HowWeDoIt />
         <Brands />
-        {/* <TeamCarousel /> */}
+        <TeamCarousel />
         <Contact />
         <Environment />
         <Footer />
