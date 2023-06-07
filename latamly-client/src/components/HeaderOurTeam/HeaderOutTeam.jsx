@@ -42,10 +42,10 @@ if (lang.cont_json) {
             </div>
             <div className={styles.boxHeader}>
                 <div>
-                    <Link to='/'><img className={styles.iconReturn} src='/assets/img/icon-return.png' alt='icono flecha atras'/></Link>
+                    <Link to={data.return}><img className={styles.iconReturn} src='/assets/img/icon-return.png' alt='icono flecha atras'/></Link>
                 </div>
                 <div className={styles.boxReturn}>
-                    <a href='/' className={styles.LinkReturn}><span>{data.title}</span></a>
+                    <a href={data.return} className={styles.LinkReturn}><span>{data.title}</span></a>
                 </div>
             </div>
         </div>
