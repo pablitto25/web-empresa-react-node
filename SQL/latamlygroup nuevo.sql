@@ -13,7 +13,8 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
+CREATE DATABASE latamlygroup;
+USE latamlygroup;
 -- Volcando estructura para tabla latamlygroup.lg_contacts
 CREATE TABLE IF NOT EXISTS `lg_contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
