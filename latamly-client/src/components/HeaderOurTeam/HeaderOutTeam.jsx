@@ -45,7 +45,7 @@ if (lang.cont_json) {
                     <Link to={data.return}><img className={styles.iconReturn} src='/assets/img/icon-return.png' alt='icono flecha atras'/></Link>
                 </div>
                 <div className={styles.boxReturn}>
-                    <a href={data.return} className={styles.LinkReturn}><span>{data.title}</span></a>
+                <Link to={data.return} className={styles.LinkReturn}><span>{data.title}</span></Link>
                 </div>
             </div>
         </div>

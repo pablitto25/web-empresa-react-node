@@ -74,9 +74,9 @@ useEffect(() => {
                     <div className={styles.button_line}></div>
                   </div>
                   <div>
-                    <div className={styles.NavDropDCall}><NavDropdown className={styles.NavDropdownBasic} id="basic-nav-dropdown" title={<span className="text-dark my-auto"><i className="fa-solid fa-globe"></i></span>}>
-                      <NavDropdown.Item className={styles.dropdown_es} style={{ width: '20px' }} href="/es">ES</NavDropdown.Item>
-                      <NavDropdown.Item className={styles.dropdown_es} style={{ width: '20px' }} href="/">EN</NavDropdown.Item>
+                    <div className={styles.NavDropDCall}><NavDropdown className={styles.NavDropdownBasic} id="basic-nav-dropdown" title={<span className="text-dark my-auto">{data.langType}</span>}>
+                      <NavDropdown.Item className={styles.dropdown_es} href="/es">ES</NavDropdown.Item>
+                      <NavDropdown.Item className={styles.dropdown_es} href="/">EN</NavDropdown.Item>
 
                     </NavDropdown></div>
                     <div className={styles.boxDropDownLine}></div>
@@ -87,9 +87,6 @@ useEffect(() => {
           </div>
         </div>
       </div>
-
-
-
     </div>
   )
 }

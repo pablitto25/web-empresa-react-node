@@ -65,7 +65,7 @@ if (lang.cont_json) {
           </div>
           <div className={styles.bullet_card}>
             <img src="/assets/img/evolved_icon.png" alt="Latamly evolved" />
-            <h4>{data["we_always"]}</h4>
+            <h4 className={styles.titleWeAlways}>{data["we_always"]}</h4>
             <p>
             {data["with_our"]}
             </p>
